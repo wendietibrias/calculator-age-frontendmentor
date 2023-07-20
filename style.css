@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,800&display=swap');
+
+:root {
+    --white:hsl(0, 0%, 100%);
+    --off-white:hsl(0, 0%, 94%);
+    --light-grey:hsl(0, 0%, 86%);
+    --smokey-grey:hsl(0, 1%, 44%);
+    --off-black:hsl(0, 0%, 8%);
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+}
+
+* {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body {
+    background-color:var(--light-grey);
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container {
+    width:550px;
+    background-color:var(--white);
+    box-shadow:2px 2px 15px var(--light-grey);
+    padding:2rem;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    border-bottom-left-radius:8px;
+    border-bottom-right-radius:100px;
+}
+
+.form-container {
+    display:flex;
+    align-items: flex-start;
+    column-gap:1rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    row-gap:0.4rem;
+}
+
+.form-control p {
+    font-size:0.75rem;
+    font-weight:700;
+    color:var(--smokey-grey);
+    text-transform: uppercase;
+}
+
+.form-control input {
+    width:120px;
+    border:solid 1px var(--light-grey);
+    font-size:1rem;
+    font-weight:700;
+    padding:0.5rem 0.8rem;
+    border-radius: 4px;
+    outline:none;
+}
+
+.form-control input.active {
+    border:solid 1px var(--light-red);
+}
+
+.form-control .error.active {
+    color:var(--light-red);
+    margin-top:0.3rem;
+    font-weight:200;
+    font-size:0.6rem;
+    font-style:italic;
+}
+
+.result-container h1 {
+    font-weight:800;
+    font-style: italic;
+    color:var(--off-black);
+}
+
+.result-container h1 span {
+    color:var(--purple);
+    font-size:3rem;
+}
+
+.divider-and-button {
+    margin:1rem 0 1.5rem;
+    width:100%;
+    height:2px;
+    background-color: var(--off-white);
+    position: relative;
+
+}
+
+.divider-and-button button {
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: var(--purple);
+    color:var(--white);
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    position:absolute;
+    right:0;
+    top:-25px;
+}
+
+.divider-and-button button img {
+    width:25px;
+    height:25px;
+}
+
+@media (width <= 420px) {
+    .container {
+        width:100%;
+        height:100vh;
+        border-radius:0px;
+    }
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-control {
+        width:100%;
+    }
+
+    .form-control input {
+        width:100%;
+    }
+
+    .divider-and-button {
+        margin:3rem 0 2rem;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Day
+  DD
+
+  Month
+  MM
+
+  Year
+  YYYY
+
+  -- years
+  -- months
+  -- days
+  
+   -->
+
+   <div class="container">
+    <div class="form-container">
+      <div class="form-control">
+        <p>Day</p>
+        <input id="day-input" type="text">
+        <span class="error"></sp>
+      </div>
+      <div class="form-control">
+        <p>Month</p>
+        <input id="month-input" type="text">
+        <span class="error"></span>
+      </div>
+      <div class="form-control">
+        <p>Year</p>
+        <input id="year-input" type="text">
+        <span class="error"></span>
+      </div>
+    </div>
+    <div class="divider-and-button">
+      <button id="generate-button">
+        <img src="assets/images/icon-arrow.svg" alt="arrow">
+      </button>
+    </div>
+    <div class="result-container">
+      <h1 ><span id="result-years">--</span> Years</h1>
+      <h1 ><span id="result-months">--</span> Months</h1>
+      <h1 ><span id="result-days">--</span> Days</h1>
+    </div>
+   </div>
+   <script src="script.js"></script>
+</body>
+</html>
